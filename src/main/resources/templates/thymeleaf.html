@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Thymeleaf Test</title>
+    <style>
+        body {
+            font-family: 'SimSun', sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Hello, Thymeleaf!</h1>
+
+<!-- 测试渲染一个变量 -->
+<p th:text="'Welcome, ' + ${english} + '!'">Welcome, Guest!</p>
+<p th:text="'欢迎, ' + ${chinese} + '!'">欢迎, Guest!</p>
+</body>
+</html>
