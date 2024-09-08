@@ -25,7 +25,7 @@ public class ConvertHtmlImpl implements ConvertHtml {
         renderer.setDocumentFromString(html);
         // 创建 FileOutputStream 将PDF保存到文件
         try (OutputStream outputStream = new FileOutputStream("thymeleaf.pdf")) {
-            String fontPath = getClass().getResource("/static/font/simsun.ttc").getPath();
+            String fontPath ="static/font/simsun.ttc";
             fontResolver.addFont(fontPath, BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
             renderer.layout();
             renderer.createPDF(outputStream);
@@ -36,6 +36,7 @@ public class ConvertHtmlImpl implements ConvertHtml {
         }
         return html;
     }
+
 
     @Override
     public InputStream convertHtmlToPDFStream(String html) {
